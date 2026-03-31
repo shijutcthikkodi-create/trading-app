@@ -1,8 +1,8 @@
 const express = require("express");
 const app = express();
 
-// IMPORTANT: use dynamic port
-const PORT = process.env.PORT || 8080;
+// ✅ Only use Railway port
+const PORT = process.env.PORT;
 
 app.get("/", (req, res) => {
   res.send("Trading App is Live 🚀");
