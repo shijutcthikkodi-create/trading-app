@@ -1,11 +1,15 @@
 const express = require("express");
-const axios = require("axios");
-
 const app = express();
-const PORT = process.env.PORT || 3000;
+
+// IMPORTANT: use dynamic port
+const PORT = process.env.PORT || 8080;
+
+app.get("/", (req, res) => {
+  res.send("Trading App is Live 🚀");
+});
 
 app.listen(PORT, () => {
-  console.log("Server running on port " + PORT);
+  console.log(`Server running on port ${PORT}`);
 });
 
 const BASE_URL = "https://script.google.com/macros/s/AKfycbzsGgTmJET-j414jqdLl3mQSy0Rm444KOWORIUAnsZHB2SFZVJKuAeHIeoMA-dDEyef/exec";
